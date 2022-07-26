@@ -2,7 +2,7 @@
 
 ## Добро пожаловать в наш проект
 
-![Главная страница] (https://github.com/SergeyNartov/graffiti-place-public/readme-file/blob/master/screenshot_1.png?raw=true)
+![Главная страница] (https://github.com/SergeyNartov/graffiti-place-public/blob/master/readme-file/screenshot_1.png?raw=true)
 
 *Рисунок 1*. Главная страница
 
