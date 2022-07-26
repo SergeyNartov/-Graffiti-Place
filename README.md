@@ -2,7 +2,7 @@
 
 ## Добро пожаловать в наш проект
 
-![Главная страница] (readme-file/Screenshot from 2022-07-20 18-20-49.png)
+![Главная страница] (https://github.com/SergeyNartov/graffiti-place-public/readme-file/screenshot_1.png)
 
 *Рисунок 1*. Главная страница
 
