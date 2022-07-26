@@ -43,7 +43,7 @@
 
 ![Главная страница](https://github.com/SergeyNartov/graffiti-place-public/blob/master/readme-file/screenshot_6.png?raw=true)
 
-*Рисунок 7*. Личный кабинет ходожника 2
+*Рисунок 7*. Личный кабинет ходожника 2 
 
 
 
