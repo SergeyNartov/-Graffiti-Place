@@ -5,7 +5,6 @@ const getOneOrderUserThunk = (id) => async (dispatch) => {
   const result = await response.json();
 
   dispatch(getOneOrderUser(result));
-  // console.log(result, '++++++++++');
 };
 
 export default getOneOrderUserThunk;

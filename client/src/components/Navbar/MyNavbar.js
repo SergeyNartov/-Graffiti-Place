@@ -11,7 +11,7 @@ export default function MyNavbar() {
   const handleLogout = () => {
     dispatch(logOutUserThunk());
   };
-  // console.log(user, 'NAVBAR_USER');
+
   return (
     <div className="navBar">
       <Link to="/"><img src={logo} alt="logo" /></Link>

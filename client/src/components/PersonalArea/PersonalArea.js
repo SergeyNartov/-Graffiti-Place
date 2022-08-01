@@ -7,28 +7,18 @@ import Message from '../Message/Message';
 import getPainterResponseThunk from '../../redux/action/painterResponse';
 import getUserCardsThunk from '../../redux/action/userCards';
 import { Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
 import { nanoid } from 'nanoid';
 import { deletePainterCardThunk } from '../../redux/action/painterCard';
 import { deleteOrderCardThunk } from '../../redux/action/orderCard';
-import { render } from 'react-dom';
 
 const avatar = '../../../public//icon__user_account.png';
-// console.log('AVATAR', avatar);
 
 function PersonalArea() {
-  // useEffect(() => {
-  //   dispatch(authUserThunk());
-  // }, []);
-
   const dispatch = useDispatch();
   const user = useSelector((s) => s.user);
   const roles = useSelector((s) => s.roles);
   const userResponse = useSelector((state) => state.painterResponse);
   const userCard = useSelector((state) => state.userCards);
-
-  // console.log(userCard, 'USERCARDSPERSONALAREA===========================================');
-  // console.log('PersonalAreaRESPONSES', userResponse);
 
   useEffect(() => {
     dispatch(authUserThunk());
@@ -49,7 +39,6 @@ function PersonalArea() {
     dispatch(getUserCardsThunk(user.id));
   };
   const handleOrderDelete = useCallback((id) => {
-    console.log(id);
     dispatch(deleteOrderCardThunk(id));
     dispatch(getRolesThunk());
     dispatch(getPainterResponseThunk(user.id));
@@ -57,7 +46,6 @@ function PersonalArea() {
   }, []);
 
   const rolesCheck = roles.filter((el) => el.id === user?.roles_id);
-  // console.log(userResponse, 'PERSONAL_AREA_USERRESPONSE');
 
   const renderPainterUser = (response, uCard) => (
     <div className="ternar-cabinet-area">
@@ -82,7 +70,6 @@ function PersonalArea() {
         {uCard.map((el) => (
           <div className="table-card">
             <div className="solo-card" key={nanoid()}>
-
               <img className="card-img" alt="Сдесь должна быть фотография" src={`${process.env.REACT_APP_serverApi}/img/${el.img}`} />
               <p>{el.city}</p>
               <p>
@@ -105,9 +92,7 @@ function PersonalArea() {
           <div className="table-card">
             <div className="solo-card" key={nanoid()}>
               <img alt="Сдесь должна быть фотография" className="card-img" src={`${process.env.REACT_APP_serverApi}/img/${el.img}`} />
-
               <p>{el.title}</p>
-
               <p>
                 {' '}
                 {el.description}
@@ -160,10 +145,6 @@ function PersonalArea() {
                 Почта:
                 {user?.email}
               </li>
-              {/* <li>
-                Аккаунт создан:
-                {user?.createdAt.slice(0, 10)}
-              </li> */}
             </ul>
 
           </div>
@@ -173,8 +154,6 @@ function PersonalArea() {
           {user.roles_id === 1 ? renderPainterUser(userResponse, userCard) : renderOrdersUser(userCard)}
         </div>
       </div>
-      {/* <h3>Мои заказы</h3>
-      <li>типа заказы</li> */}
     </div>
   );
 }

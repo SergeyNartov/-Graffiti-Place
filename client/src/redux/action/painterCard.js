@@ -18,7 +18,6 @@ export const createPainterCardThunk = (body) => async (dispatch) => {
     },
   );
   const result = await response.json();
-  // console.log(result, 'RESULT_CREATE_PAINTES_CARD');
   dispatch(createPainterCard(result));
 };
 
@@ -30,9 +29,7 @@ export const deletePainterCardThunk = (id) => async (dispatch) => {
       credentials: 'include',
     },
   );
-  // console.log(response);
   if (response.status === 200) {
-    // console.log('response111', id);
     dispatch(deletePainterCard(id));
   }
 };

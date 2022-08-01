@@ -13,7 +13,6 @@ function AuthForm() {
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.user);
-  // console.log(user);
 
   const handleForm = () => {
     setLoginToggle(!loginToggle);
@@ -38,7 +37,6 @@ function AuthForm() {
       formData.append('discription', form.discription);
       formData.append('roles_id', role);
 
-      // console.log(Object.fromEntries(formData))
       dispatch(regUserThunk(formData));
 
       setForm({});
@@ -49,10 +47,6 @@ function AuthForm() {
         navigate('/ihavepaint');
       }
     }
-  };
-
-  const handleLogout = () => {
-    dispatch(logOutUserThunk());
   };
 
   const handleChange = (e) => {
@@ -144,7 +138,7 @@ function AuthForm() {
           </label>
 
           <button className="regButton" type="submit">{loginToggle ? 'Войти' : 'Зарегистрироваться'}</button>
-          {/* <button className="regButton" type="submit" onClick={handleLogout}> Выйти</button> */}
+
         </form>
       </div>
     </div>

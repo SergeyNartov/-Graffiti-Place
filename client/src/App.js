@@ -18,7 +18,6 @@ function App() {
     dispatch(authUserThunk());
   }, []);
   const location = useLocation();
-  // console.log('44444444444444444444444444444', location);
   const color = location.pathname === '/' ? '#7F00FF' : '#222222';
 
   return (
@@ -29,7 +28,6 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/auth" element={<AuthForm />} />
         <Route path="/user/:id" element={<OneUser />} />
-        {/* <Route path="/2" element={<CreatePainterCardForm />} /> */}
         <Route path="/ihavepaint" element={<PainterCardList />} />
         <Route path="/ihavewall" element={<OrderCardList />} />
         <Route path="/personalarea" element={<PersonalArea />} />

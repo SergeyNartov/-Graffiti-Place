@@ -147,7 +147,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: start;
+  /* justify-content: start; */
   background-color: rgba(255, 184, 0, 1);
 }
 

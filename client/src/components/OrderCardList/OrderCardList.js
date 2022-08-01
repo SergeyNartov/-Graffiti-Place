@@ -8,18 +8,14 @@ import CreateOrderCardForm from '../CreateOrderCardForm/CreateOrderCardForm';
 function OrderCardList() {
   const user = useSelector((state) => state.user);
 
-  // console.log('ORDERCARDLIST', user);
-
   const dispatch = useDispatch();
   const orderCards = useSelector((state) => state.orderCard);
-  // console.log(orderCards, 'карта для вытаскивания id');
 
   useEffect(() => {
     dispatch(getOrderCardThunk());
   }, []);
 
   const handleResponse = useCallback((orderId, userId) => {
-    console.log(orderId, userId);
     fetch(`${process.env.REACT_APP_serverApi}/response`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -50,8 +46,6 @@ function OrderCardList() {
                   Откликнуться
                 </button>
               ) : null}
-              {/* <button className="cardButton" type="submit" onClick={() => handleDelete(el.id)}>Удалить</button> */}
-              {/* <button className="cardButton" type="submit" onClick={() => handleResponse(el.id, user.id)}>Редактировать</button> */}
             </div>
           </div>
         ))}

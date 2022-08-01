@@ -2,15 +2,14 @@ import React, { useEffect, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 import getOneUserThunk from '../../redux/action/oneUser';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 function OneUser() {
   const person = useSelector((state) => state.oneUser);
-  const params = useParams();// console.log(params.id,'PARAMSSSSSSSSSSSSSS');
+  const params = useParams();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // console.log(person.Orders);
     dispatch(getOneUserThunk(params.id));
   }, []);
 
@@ -44,7 +43,6 @@ function OneUser() {
           <div className="table-card">
             <div className="solo-card" key={nanoid()}>
               <img className="card-img" src={`${process.env.REACT_APP_serverApi}/img/${el.img}`} alt="orders" />
-
               <p>{el.city}</p>
               <p>
                 {el.description}
@@ -59,9 +57,6 @@ function OneUser() {
     </div>
   );
 
-  // console.log(person, 'oneOrderUserCOMPONENTS');
-  // {person.roles_id === 1 && }
-  // if (person.roles_id === 2)
   return (
     <div className="area">
       <div className="areaDiv1">

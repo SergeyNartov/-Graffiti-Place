@@ -14,11 +14,8 @@ function CreatePainterCardForm() {
     const formData = new FormData();
     formData.append('city', form.city);
     formData.append('description', form.desc);
-    // formData.append("img", form.img)
     formData.append('user_id', userId);
     formData.append('file', form.file);
-
-    //  console.log(Object.fromEntries(formData))
     dispatch(createPainterCardThunk(formData));
     setForm({});
     e.target.reset();

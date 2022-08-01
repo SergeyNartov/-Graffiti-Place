@@ -15,12 +15,9 @@ function CreateOrderCardForm() {
 
     formData.append('title', form.city);
     formData.append('description', form.description);
-    // formData.append("img", form.img)
     formData.append('customer_id', userId);
     formData.append('file', form.file);
     formData.append('status', false);
-
-    // console.log(Object.fromEntries(formData));
 
     dispatch(createOrderCardThunk(formData));
     setForm({});

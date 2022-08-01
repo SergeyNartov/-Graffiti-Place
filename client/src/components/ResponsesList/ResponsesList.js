@@ -13,8 +13,6 @@ function ResponsesList() {
     dispatch(getResponsesList(params.id));
   }, []);
 
-  // console.log(list, 'LIIIIISSSSSSSTTTTTTTTTTTT');
-
   return (
     <div className="card">
       <div className="response-painter">
@@ -33,19 +31,4 @@ function ResponsesList() {
   );
 }
 
-// return (
-//   <div>
-//     {list.length > 0 ? list.map((el) => (
-//       <>
-//         <div>
-//           <Link key={nanoid()} to={/user/${el.User.id}}>{el.User.name}</Link>
-//         </div>
-
-//       </>
-//     )) : 'Пока никто не откликнулся'}
-//     >
-
-//   </div>
-
-// );
 export default ResponsesList;

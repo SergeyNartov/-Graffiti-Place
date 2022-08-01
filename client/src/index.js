@@ -7,8 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 import ChatContextProvider from './components/Context/Context';
 import './components/Styles/Style.css';
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 const container = document.getElementById('root');
 const root = createRoot(container);
 
