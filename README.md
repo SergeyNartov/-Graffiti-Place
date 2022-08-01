@@ -47,18 +47,19 @@
 
 Запуск приложения:
 1. Склонировать репозиторий.
-2. Запуск сервера:
+2. Установить docker: https://docs.docker.com/engine/install/
+3. Установить docker compose: https://docs.docker.com/compose/install/
+4. Запуск сервера:
   а) Отрыть терминал в папке  graffiti-place-public/server;
-  б) Заполнить файл envExample, с последующем переименованием в .env;
-  в) Выполнить команду npm install;
+  б) Выполнить команду npm install;
+  в) Выполнить команду sudo docker-compose up -d;
   г) Выполнить команду npx sequelize db:migrate;
   д) Выполнить команду npx sequelize db:seed:all;
   е) Выполнить команду npm start.
 3. Запуск клиента:
   а) Отрыть терминал в папке  graffiti-place-public/client;
-  б) Заполнить файл envExample, с последующем переименованием в .env;
-  в) Выполнить команду npm install;
-  е) Выполнить команду npm start.
+  б) Выполнить команду npm install;
+  в) Выполнить команду npm start.
 
 
 
